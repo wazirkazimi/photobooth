@@ -32,13 +32,6 @@ While this version focuses on visual design, it lays the foundation for integrat
 
 ---
 
-## 🎨 The UI Design (Figma)
-
-[Figma Design – Selfie Photobooth](https://www.figma.com/design/YOUR_FIGMA_LINK)
-
-> *(Replace with your actual Figma shareable link)*
-
----
 
 ## 🧠 The logic behind the project
 
