@@ -1,0 +1,434 @@
+/* Modernized Photobooth Styles */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #7F9CF5 0%, #C084FC 50%, #F87171 100%);
+  min-height: 100vh;
+  font-family: 'Chakra Petch', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.modern-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 2px 16px rgba(127,156,245,0.08);
+  border-radius: 0 0 24px 24px;
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.wide-navbar {
+  width: 100vw;
+  max-width: 100%;
+  border-radius: 0 0 24px 24px;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  box-sizing: border-box;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7F9CF5;
+  letter-spacing: 1px;
+}
+.modern-navbar nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.modern-navbar nav ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.modern-navbar nav ul li a:hover {
+  color: #C084FC;
+}
+
+.glass-ui.modern-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 40vh;
+  width: 100%;
+  text-align: center;
+}
+.instructions h1 {
+  color: #7F9CF5;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.instructions p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.modern-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+video {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(127,156,245,0.12);
+}
+
+.modern-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.modern-btns button, .modern-btns a, .modern-btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #7F9CF5 0%, #C084FC 100%);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 2px 12px rgba(127,156,245,0.15);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.modern-btns button:hover, .modern-btns a:hover, .modern-btn:hover {
+  background: linear-gradient(90deg, #C084FC 0%, #F87171 100%);
+  box-shadow: 0 4px 24px rgba(192,132,252,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+.icon {
+  font-size: 1.2em;
+}
+
+.capture-btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+}
+
+.layout {
+  margin: 2rem auto 1rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(127,156,245,0.10);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+  max-width: 250px;
+  min-height: 320px;
+}
+canvas {
+  width: 100%;
+  max-width: 220px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  margin: 0 auto;
+  box-shadow: 0 1px 6px rgba(127,156,245,0.08);
+}
+
+.toggle-preview {
+  margin-top: 1.5rem;
+  background: #fff;
+  color: #7F9CF5;
+  border: 1px solid #7F9CF5;
+  font-weight: 600;
+  border-radius: 24px;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.toggle-preview:hover {
+  background: #7F9CF5;
+  color: #fff;
+}
+
+/* Modal Styles */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.35);
+  transition: opacity 0.2s;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 8px 32px rgba(127,156,245,0.18);
+  min-width: 300px;
+  max-width: 90vw;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  color: #C084FC;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close:hover, .close:focus {
+  color: #F87171;
+}
+#modal-canvas {
+  width: 100%;
+  max-width: 220px;
+  margin: 1rem auto;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(127,156,245,0.08);
+}
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.modern-footer {
+  width: 100%;
+  background: rgba(255,255,255,0.85);
+  color: #7F9CF5;
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -2px 16px rgba(127,156,245,0.08);
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .glass-ui.modern-main {
+    max-width: 98vw;
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+  }
+  .layout {
+    min-width: 160px;
+    max-width: 180px;
+  }
+  .modal-content {
+    min-width: 180px;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .modern-navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+  }
+  .brand {
+    font-size: 1.1rem;
+  }
+  .glass-ui.modern-main {
+    padding: 0.5rem 0.2rem 1rem 0.2rem;
+  }
+  .instructions h1 {
+    font-size: 1.2rem;
+  }
+  .instructions p {
+    font-size: 0.95rem;
+  }
+  .layout, #modal-canvas, canvas {
+    min-width: 100px;
+    max-width: 120px;
+  }
+  .modal-content {
+    min-width: 100px;
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+  }
+  .modern-footer {
+    font-size: 0.85rem;
+    padding: 0.5rem 0 0.3rem 0;
+  }
+}
+
+/* Accessibility: Focus Styles */
+button:focus, a:focus, .close:focus {
+  outline: 2px solid #7F9CF5;
+  outline-offset: 2px;
+}
+
+.center-video {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 60vh;
+}
+
+.layout, #canvas {
+  display: none !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.capture-flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 3rem;
+  min-height: 60vh;
+}
+.capture-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.photobooth-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+.photo-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.photo-strip-left img {
+  transform: rotate(-8deg);
+  z-index: 1;
+  width: 180px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  background: #fff;
+}
+.photo-strip-right img {
+  transform: rotate(8deg);
+  z-index: 1;
+  width: 180px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  background: #fff;
+}
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 900px) {
+  .photobooth-hero {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .photo-strip-left img, .photo-strip-right img {
+    width: 120px;
+  }
+  .main-title {
+    font-size: 2rem;
+  }
+}
+
+.home-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+  margin-top: 2.5rem;
+}
+.side-strip {
+  width: 180px;
+  max-width: 22vw;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  background: #fff;
+}
+.left-strip {
+  transform: rotate(-8deg);
+}
+.right-strip {
+  transform: rotate(8deg);
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+@media (max-width: 900px) {
+  .home-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .side-strip {
+    width: 120px;
+    max-width: 40vw;
+  }
+}

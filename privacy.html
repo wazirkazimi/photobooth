@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Police</title>
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #7F9CF5, #C084FC, #F87171);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      position: absolute;
+      top: 10px;
+      background-color: #ffffff;
+      width: fit-content;
+      padding: 20px;
+      border-radius: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 1rem;
+      transition: color 0.3s ease; /* Smooth hover effect */
+    }
+    .navbar ul li a:hover {
+      color: #7F9CF5; /* Match the gradient colors */
+    }
+
+    /* Header Styling */
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #ffffff;
+      margin-top: 80px; /* Add spacing below the navbar */
+    }
+
+    /* Glassmorphism Container */
+    .glass-ui {
+      position: relative;
+      width: 80%;
+      height: auto;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      margin: 20px auto;
+    }
+    @supports not (backdrop-filter: blur(20px)) {
+      .glass-ui {
+        background: rgba(255, 255, 255, 0.3); /* Fallback for unsupported browsers */
+      }
+    }
+    .glass-ui p {
+      font-size: 1rem;
+      margin: 15px 0;
+    }
+    .glass-ui h2 {
+      font-size: 1.8rem;
+      margin-top: 30px;
+      color: #ffffff;
+    }
+    .glass-ui ul {
+      margin-left: 20px;
+    }
+    .glass-ui li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #fff;
+      margin-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .credit {
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+
+    /* Tablet Optimization */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      .glass-ui {
+        padding: 15px;
+        width: 90%;
+      }
+      .glass-ui p {
+        font-size: 0.95rem;
+      }
+      .glass-ui h2 {
+        font-size: 1.5rem;
+      }
+      .glass-ui ul {
+        margin-left: 15px;
+      }
+      footer p {
+        font-size: 0.85rem;
+      }
+      .navbar {
+        padding: 15px;
+      }
+      .navbar ul {
+        gap: 15px;
+      }
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .glass-ui {
+        padding: 10px;
+        width: 95%;
+      }
+      .glass-ui p {
+        font-size: 0.9rem;
+      }
+      .glass-ui h2 {
+        font-size: 1.3rem;
+      }
+      .glass-ui ul {
+        margin-left: 10px;
+      }
+      footer p {
+        font-size: 0.8rem;
+      }
+      .navbar {
+        padding: 10px;
+      }
+      .navbar ul {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+      <li><a href="https://www.linkedin.com/in/wazir-kazimi/">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
+  <header>
+    <h1>Privacy Police</h1>
+  </header>
+  <div class="glass-ui">
+   <p>Your privacy matters! This Photobooth App does not collect, store, or share any of your data or photos. Everything happens locally on your device—your images never leave your browser.
+
+    The app only accesses your camera with your permission, and once you take your photos, they stay with you. No uploads, no tracking, no hidden storage.</p>
+  <footer>
+    <div class="credit">Made with ❤️ by Wazir Kazimi</div>
+  </footer>
+</body>
+</html>

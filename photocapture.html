@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Photobooth | Photo Capture</title>
+</head>
+<body>
+    <header class="navbar modern-navbar wide-navbar">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./privacy.html">Privacy Policy</a></li>
+                <li><a href="https://www.linkedin.com/in/wazir-kazimi/" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="glass-ui modern-main">
+        <section class="instructions">
+            <h1>Take Your Photo Strip!</h1>
+            <p>1. Allow camera access.<br>
+               2. Click <b>Capture</b> to take 3 photos.<br>
+               3. Preview your photo strip.<br>
+               4. Download or retake as you like!</p>
+        </section>
+        <div class="capture-flex-row">
+            <div class="capture-left">
+                <video id="video" autoplay playsinline aria-label="Camera preview"></video>
+                <div class="modern-btns">
+                    <button id="capture" class="capture-btn" aria-label="Capture photo strip">
+                        <span class="icon">📸</span> Capture
+                    </button>
+                    <button id="hide" class="toggle-preview" aria-label="Show or hide photo strip">Show</button>
+                </div>
+            </div>
+            <!-- Photo strip preview removed -->
+        </div>
+        <!-- Modal for photo preview and download -->
+        <div id="preview-modal" class="modal" aria-modal="true" role="dialog" style="display:none;">
+            <div class="modal-content">
+                <span id="close-modal" class="close" tabindex="0" role="button" aria-label="Close preview">&times;</span>
+                <h2>Your Photo Strip</h2>
+                <canvas id="modal-canvas"></canvas>
+                <div class="modal-actions">
+                    <a id="modal-download" download="photo_strip.png" class="modern-btn">Download</a>
+                    <button id="modal-retake" class="modern-btn">Retake</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
